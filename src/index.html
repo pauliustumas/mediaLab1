@@ -1,36 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset=utf-8/>
+<meta charset="utf-8"/>
 <title>Lab 1. Introduction to HTML5 and HLS</title>
-  
-  <!--
-  Embed needed js libraries for video player. Note, libraries needs to be hosted on your server, under /js folder.
-   -->
-  <!--
-  Location for CSS if needed. Note, cascade style sheets needs to be hosted on your server, under /css folder.
-  -->
-   
 
+<link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
 
 </head>
 <body>
-  <h1>My first HLS player</h1>
+  <h1>Pirmas multimediju laboras</h1>
   
-  <!--
-  location for your player window
-  -->
-  
-	<button type="button">Play</button>
-	<button type="button">Pause</button>
-	<button type="button">Stop</button>
-	<button type="button">Jump to 5 sec forward</button>
-	<button type="button">Jump to 5 sec backwards</button>	
+<div id="video_controls">
+
+	<button onclick="playVid()" type="button">Play</button>
+	<button onclick="pauseVid()" type="button">Pause</button>
+	<button onclick="stopVid()" type="button">Stop</button><br> 
+	<button onclick="jump5forw()" type="button">Jump to 5 sec forward</button>
+	<button onclick="jump5back()" type="button">Jump to 5 sec backwards</button>	
+	<button onclick="time()" type="button">Check video time</button><br> 
+
+
+<div id="player_box">
+
+<video id="vidas" controls class="vjs-default-skin video-js" width="640" height="268">
+
+<!--
+<source src="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" type="application/x-mpegURL">
+-->
+
+<source src="trailer_400p.ogg" type="video/ogg">
+</video>
+
+</div> 
+ </div> 
+
+<script src="js/video.js"></script>
+<script src="js/streaming.js"></script>
+
+  <script>
+    var player = document.getElementById("vidas");
 	
-	<p>Playlist</p>
+	function playVid(){
+	player.play();
+}
+
+	function pauseVid(){
+	player.pause();
+}
+
+	function stopVid() { 
+  	player.currentTime=0;
+	player.pause();
 	
-	<input type="text" name="url1" size="100" value="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8"><button type="button">Load</button><br>
-	<input type="text" name="url2" size="100" value="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8"><button type="button">Load</button><br>
-	<button type="button">Shuffle</button>
+} 
+
+	function jump5forw() { 
+  	player.currentTime = player.currentTime+5;
+} 
+
+	function jump5back() { 
+  	player.currentTime = player.currentTime-5;
+} 
+	function time() { 
+  	alert("Current time is: " + player.currentTime + "... nesuprantu kaip kita dali daryt...");
+	player.pause();
+} 
+
+
+
+  </script>
+
+
+
 </body>
 </html>
