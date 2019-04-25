@@ -27,3 +27,17 @@ function load(url) {
     var videoUrl = document.getElementsByName(url)[0].value;
     player.src(videoUrl);
 }
+
+function shuffle() {
+    // name tags of input fields
+    var videos = [
+        "url1",
+        "url2"
+    ];
+
+    // select random video from array
+    var video = videos[Math.floor(Math.random() * videos.length)];
+
+    // Load it
+    load(video);
+}
