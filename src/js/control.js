@@ -22,3 +22,8 @@ function forward() {
 function backward() {
     player.currentTime(player.currentTime() - timeSpan);
 }
+
+function load(url) {
+    var videoUrl = document.getElementsByName(url)[0].value;
+    player.src(videoUrl);
+}
