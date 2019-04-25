@@ -6,6 +6,7 @@
   <title>Lab 1. Introduction to HTML5 and HLS</title>
 
   <link href="css/video-js.css" rel="stylesheet">
+  <script src="js/control.js"></script>
 </head>
 
 <body>
@@ -22,8 +23,8 @@
     player.play();
   </script>
 
-  <button type="button">Play</button>
-  <button type="button">Pause</button>
+  <button type="button" onclick="play()">Play</button>
+  <button type="button" onclick="pause()">Pause</button>
   <button type="button">Stop</button>
   <button type="button">Jump to 5 sec forward</button>
   <button type="button">Jump to 5 sec backwards</button>
