@@ -5,6 +5,11 @@ This lab aims to build your first HTML5 live stream (HLS) player.
 There are many open source alternatives. You can try to use as Video.js player as a startup: https://github.com/videojs/video.js
 or try a live example: https://jsbin.com/gejugat/edit?html,output
 
+# Tested browsers
+Works and tested on:
+- Mozilla Firefox 66.0.3 (64-bit)
+- Microsoft Edge 44.17763.1.0
+
 # Requirements for repository
   - You have to clone this repository and make two branches (master and develop).
   - The develop branch should contain commits of every new feature of the player.
