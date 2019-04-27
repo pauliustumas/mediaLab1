@@ -12,3 +12,6 @@ var player = videojs('v_01');
     function JumpForwards(){
          player.currentTime(player.currentTime() + 5);
     }
+    function JumpBackwards(){
+        player.currentTime(player.currentTime() - 5);
+    }
