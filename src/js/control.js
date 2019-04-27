@@ -5,3 +5,7 @@ var player = videojs('v_01');
     function pause() {
         player.pause();
     }
+    function stop(){
+        player.currentTime(0);
+        player.pause();
+    }
