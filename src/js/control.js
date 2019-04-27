@@ -9,3 +9,6 @@ var player = videojs('v_01');
         player.currentTime(0);
         player.pause();
     }
+    function JumpForwards(){
+         player.currentTime(player.currentTime() + 5);
+    }
