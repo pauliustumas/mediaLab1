@@ -1,3 +1,8 @@
+# Narsykles.
+
+Veikia su Edge ir Chrome narsyklemis
+
+
 # mediaLab1
 
 This lab aims to build your first HTML5 live stream (HLS) player.
